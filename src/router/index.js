@@ -1,21 +1,25 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import DoctorsView from '../views/DoctorsView.vue'
-import AppointmentsView from '../views/AppointmentsView.vue'
-import ContactView from '../views/ContactView.vue'
-import LoginView from '../views/LoginView.vue'
+import { createRouter, createWebHistory } from "vue-router";
+
+// استيراد الفيوهات
+import Home from "../views/Home.vue";
+import Doctor from "../views/Doctors.vue";
+import MyAppointments from "../views/MyAppointments.vue";
+import Contact from "../views/Contact.vue";
+import DoctorLogin from "../views/doctorLogin.vue";
+import DoctorDashboard from "../views/DoctorDashboard.vue";
 
 const routes = [
-  { path: '/', name: 'home', component: HomeView },
-  { path: '/doctors', name: 'doctors', component: DoctorsView },
-  { path: '/appointments', name: 'appointments', component: AppointmentsView },
-  { path: '/contact', name: 'contact', component: ContactView },
-  { path: '/login', name: 'login', component: LoginView },
-]
+  { path: "/", component: Home },
+  { path: "/doctors", component: Doctor },
+  { path: "/appointments", component: MyAppointments }, // صححت المسار
+  { path: "/contact", component: Contact },
+  { path: "/doctor-login", component: DoctorLogin },
+  { path: "/doctor-dashboard", component: DoctorDashboard }
+];
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes,
-})
+});
 
-export default router
+export default router;
