@@ -30,8 +30,7 @@
     <!-- صفحات المشروع -->
     <router-view />
   </div>
-     <!-- Footer -->
-      <footer class="py-6 text-center text-sm text-slate-500 dark:text-slate-400">© 2025 TopDoc</footer>
+     
 </template>
 
 <script>
